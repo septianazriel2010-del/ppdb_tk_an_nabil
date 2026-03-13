@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>tes commit</h1>
+    <p>paragraf commit</p>
 </body>
 </html>
