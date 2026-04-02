@@ -3,3 +3,122 @@
     margin: 0px;
     font-family: sans-serif;
 }
+body {
+    width: 100%;
+    height: 2000px;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(41, 13, 221, 0.8);
+    border-bottom: 2px solid hsl(0, 0%, 0%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.navbar h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    font-style: italic;
+}
+.navbar h3 span {
+    color: hsl(146, 100%, 53%);
+}
+.navbar .navbar-nav a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover {
+    color: aquamarine;
+    animation: 200ms;
+}
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #fff;
+    transform: scaleX(0);
+    transition: 200ms linear;
+}
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+.navbar .navbar-extra {
+    display: flex;
+}
+.navbar .navbar-extra a {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+    color: rgb(65, 253, 190);
+}
+#menu {
+    display: none;
+}
+
+/* MediaQueries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 75%;
+    }
+    #menu {
+        display: inline-block;
+    }
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #94ebeb;
+        width: 30rem;
+        height: 100vh;
+        transition: 200ms;
+    }
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+}
+
+
+/* Mobile Phone */
+
+@media (max-width: 450px) {
+    html {
+        font-size: 65%;
+    }
+}
