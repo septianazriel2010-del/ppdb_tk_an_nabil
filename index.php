@@ -26,6 +26,11 @@
         </main>
      </section>
 
+     <!-- Profile Sekolah -->
+      <section class="profile" id="profile">
+        <h2><span>Profile </span>Sekolah</h2>
+      </section>
+
     <!-- JavaScript -->
     <script src="assets/js/java.js"></script>
 </body>
