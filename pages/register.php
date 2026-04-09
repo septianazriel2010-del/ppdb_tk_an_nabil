@@ -18,7 +18,7 @@ if (isset($_POST['register'])) {
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-
+<section class="register" id="register">
 <div class="card">
     <h2>Register</h2>
 
@@ -62,6 +62,7 @@ if (isset($_POST['register'])) {
         Sudah punya akun? <a href="login.php">Login</a>
     </p>
 </div>
+</section>
 
 </body>
 </html>

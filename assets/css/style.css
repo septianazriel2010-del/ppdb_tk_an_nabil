@@ -2,10 +2,11 @@
     padding: 0%;
     margin: 0px;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 body {
     width: 100%;
-    height: 2000px;
+    /* min-height: 2000px; */
 }
 
 /* Navbar */
@@ -372,7 +373,13 @@ body {
         0 0 20px rgba(255,255,255,0.6);
 }
 /* Register */
-
+.register {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+}
 .card {
     background: linear-gradient(135deg, #ffffff, #f0f9ff);
     padding:2rem;
@@ -586,6 +593,9 @@ input:valid {
     .login-container {
         width: 300px;
     }
+    .register .card {
+        width: 300px;
+    }
 }
 
 
@@ -617,8 +627,10 @@ input:valid {
     }
     .login-container {
         width: 350px;
+        margin: 0 8rem;
     }
-    .login-container {
+    .register .card {
+        width: 350px;
         margin: 0 8rem;
     }
 }
