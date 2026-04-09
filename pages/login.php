@@ -8,6 +8,8 @@ if (isset($_POST['login'])) {
     if ($user) {
         $_SESSION['login'] = true;
         $_SESSION['role'] = $user['role'];
+        $_SESSION['nama'] = $user['nama'];
+        $_SESSION['email'] = $user['email'];
 
         // redirect berdasarkan role
         if ($user['role'] == 'admin') {
@@ -31,7 +33,7 @@ if (isset($_POST['login'])) {
 </head>
 
 <body>
-
+<section class="login" id="login">
 <div class="login-container">
     <h2>Login</h2>
 
@@ -59,7 +61,7 @@ if (isset($_POST['login'])) {
 </p>
     </form>
 </div>
-
+</section>
 <script>
 // hide password
 function togglePassword() {

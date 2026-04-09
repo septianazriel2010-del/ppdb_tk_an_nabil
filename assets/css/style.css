@@ -372,18 +372,6 @@ body {
         0 0 20px rgba(255,255,255,0.6);
 }
 /* Register */
-* {
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-body {
-    height: 100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background: linear-gradient(135deg, #06b6d4, #3b82f6);
-}
 
 .card {
     background: linear-gradient(135deg, #ffffff, #f0f9ff);
@@ -448,16 +436,13 @@ button:hover {
     text-decoration: none;
 }
 /* Login */
-* {margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
-
-body {
+.login {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #06b6d4, #3b82f6);
 }
-
 /* Card */
 .login-container {
     background: linear-gradient(135deg, #ffffff, #f0f9ff);
@@ -598,6 +583,9 @@ input:valid {
         text-align: center;
         width: 100%;
     }
+    .login-container {
+        width: 300px;
+    }
 }
 
 
@@ -629,5 +617,8 @@ input:valid {
     }
     .login-container {
         width: 350px;
+    }
+    .login-container {
+        margin: 0 8rem;
     }
 }
