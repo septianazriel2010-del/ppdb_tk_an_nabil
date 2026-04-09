@@ -70,6 +70,21 @@
                 <img src="assets/img/gambar3.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum aperiam reiciendis dignissimos sapiente, sequi quia alias incidunt ratione! Beatae, omnis.</p>
             </div>
+            <div class="berita-cards">
+                <h3><span>Lorem ipsum dolor sit amet.</span></h3>
+                <img src="assets/img/gambar3.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum aperiam reiciendis dignissimos sapiente, sequi quia alias incidunt ratione! Beatae, omnis.</p>
+            </div>
+            <div class="berita-cards">
+                <h3><span>Lorem ipsum dolor sit amet.</span></h3>
+                <img src="assets/img/gambar3.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum aperiam reiciendis dignissimos sapiente, sequi quia alias incidunt ratione! Beatae, omnis.</p>
+            </div>
+            <div class="berita-cards">
+                <h3><span>Lorem ipsum dolor sit amet.</span></h3>
+                <img src="assets/img/gambar3.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum aperiam reiciendis dignissimos sapiente, sequi quia alias incidunt ratione! Beatae, omnis.</p>
+            </div>
         </div>
        </section>
     <?php include 'includes/footer.php' ?>
