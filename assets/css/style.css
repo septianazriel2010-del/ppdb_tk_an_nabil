@@ -634,3 +634,98 @@ input:valid {
         margin: 0 8rem;
     }
 }
+/* Section Footer */
+.footer-containers {
+    width: 100%;
+    min-height: 50vh;
+    background-color: rgb(25, 91, 255);
+    margin-top: 5rem;
+}
+.footer-containers .footer-cards {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5rem 0;
+}
+.footer-containers .footer-cards .footer-yapping {
+    /* background-color: #94ebeb; */
+}
+.footer-containers .footer-cards .footer-menu {
+    /* background-color: #94ebeb; */
+    border-left: 1px solid rgb(255, 255, 255);
+}
+.footer-containers .footer-cards .footer-sosial {
+    /* background-color: #94ebeb; */
+    border-left: 1px solid rgb(255, 255, 255);
+}
+.footer-containers .footer-cards .footer-yapping h2 {
+    padding: 1rem ;
+    text-align: center;
+    font-size: 2rem;
+}
+.footer-containers .footer-cards .footer-menu h2 {
+    padding: 1rem ;
+    text-align: center;
+    font-size: 2rem;
+}
+.footer-containers .footer-cards .footer-sosial h2 {
+    padding: 1rem ;
+    text-align: center;
+    font-size: 2rem;
+}
+.footer-containers .footer-cards .footer-yapping h2 {
+    padding: 1rem ;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+.footer-containers .footer-cards .footer-yapping p {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    color: rgb(37, 36, 48);
+}
+.footer-containers .footer-cards .footer-menu a {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    color: rgb(37, 36, 48);
+}
+.footer-containers .footer-cards .footer-menu h2 {
+    color: rgb(255, 255, 255);
+}
+.footer-containers .footer-cards .footer-sosial ul li a {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    color: rgb(37, 36, 48);
+    text-decoration: none;
+}
+.footer-containers .footer-cards .footer-sosial ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.footer-containers .footer-cards .footer-sosial h2 {
+    color: rgb(255, 255, 255);
+}
+.footer-containers .copyright p {
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    padding: 2rem 0;
+}
+
+
+
+
+
+// Responsive Footer
+.footer-containers .footer-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    .footer-containers .footer-cards .footer-menu,
+    .footer-containers .footer-cards .footer-sosial {
+        border: none;
+    }
