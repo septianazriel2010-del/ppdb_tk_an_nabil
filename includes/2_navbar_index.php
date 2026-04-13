@@ -18,7 +18,7 @@
         <i class="fas fa-newspaper"></i>
         <span>Berita</span> 
     </a>
-    <a href="daftar.php">
+    <a href="pages/login.php">
         <i class="fas fa-clipboard-user"></i>
         <span>PPDB</span> 
     </a>

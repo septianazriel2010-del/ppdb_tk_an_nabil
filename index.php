@@ -29,8 +29,65 @@
      <!-- Profile Sekolah -->
       <section class="profile" id="profile">
         <h2><span>Profile </span>Sekolah</h2>
+        
+        <div class="row">
+            <div class="left">
+                <h3><span>Visi</span></h3>
+                <p><span>B :</span> Berahlak Karimah <br><span>A : </span>Aktif <br><span>T : </span>Terampil <br><span>  I : </span>Inovatif <br><span>K : </span>Kerja Sama </p>
+            </div>
+            <div class="right">
+                <h3><span>Misi</span></h3>
+                <p> Berakhlakul karimah dengan membiasakan 5S (Senyum, Sapa, Salam, Sopan, Santun).
+                    Anak aktif mengeksplorasi pembelajaran melalui permainan.
+                    Anak terampil dalam berkreativitas.
+                    Mengembangkan pembelajaran melalui imajinasi.
+                    Menjalin kerja sama yang baik dengan warga belajar lain. </p>
+            </div>
+        </div>
+        <div class="mid">
+            <h3>Sejarah Sekolah</h3>
+            <p>RA AN NABIL merupakan lembaga pendidikan anak usia dini yang berada di bawah naungan Yayasan AN NI,MAH. Lembaga ini didirikan pada tahun 2012 dengan tujuan memberikan pendidikan dasar keagamaan dan pembentukan karakter bagi anak usia dini.
+            <br><br>
+            Seiring berjalannya waktu, RA AN NABIL terus berupaya meningkatkan kualitas pendidikan dan pelayanan kepada peserta didik. Pada tahun 2022, RA AN NABIL memperoleh Akreditasi C dengan nilai 649 sebagai bentuk pengakuan terhadap mutu lembaga.</p>
+        </div>
       </section>
-
+      <!-- Berita -->
+       <section class="berita" id="berita">
+        <h2><span>Berita</span></h2>
+        <div class="container-berita">
+            <div class="berita-cards">
+                <h3><span>Lorem ipsum dolor sit amet.</span></h3>
+                <img src="assets/img/gambar1.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum aperiam reiciendis dignissimos sapiente, sequi quia alias incidunt ratione! Beatae, omnis.</p>
+            </div>
+            <div class="berita-cards">
+                <h3><span>Lorem ipsum dolor sit amet.</span></h3>
+                <img src="assets/img/gambar2.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum aperiam reiciendis dignissimos sapiente, sequi quia alias incidunt ratione! Beatae, omnis.</p>
+            </div>
+            <div class="berita-cards">
+                <h3><span>Lorem ipsum dolor sit amet.</span></h3>
+                <img src="assets/img/gambar3.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum aperiam reiciendis dignissimos sapiente, sequi quia alias incidunt ratione! Beatae, omnis.</p>
+            </div>
+            <div class="berita-cards">
+                <h3><span>Lorem ipsum dolor sit amet.</span></h3>
+                <img src="assets/img/gambar3.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum aperiam reiciendis dignissimos sapiente, sequi quia alias incidunt ratione! Beatae, omnis.</p>
+            </div>
+            <div class="berita-cards">
+                <h3><span>Lorem ipsum dolor sit amet.</span></h3>
+                <img src="assets/img/gambar3.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum aperiam reiciendis dignissimos sapiente, sequi quia alias incidunt ratione! Beatae, omnis.</p>
+            </div>
+            <div class="berita-cards">
+                <h3><span>Lorem ipsum dolor sit amet.</span></h3>
+                <img src="assets/img/gambar3.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum aperiam reiciendis dignissimos sapiente, sequi quia alias incidunt ratione! Beatae, omnis.</p>
+            </div>
+        </div>
+       </section>
+    <?php include 'includes/footer.php' ?>
     <!-- JavaScript -->
     <script src="assets/js/java.js"></script>
 </body>
