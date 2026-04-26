@@ -1,0 +1,8 @@
+# ── Nonaktifkan directory listing ──
+Options -Indexes
+
+# ── Blokir akses langsung ke file sensitif ──
+<FilesMatch "\.(sql|log|env|bak|sh|json)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
