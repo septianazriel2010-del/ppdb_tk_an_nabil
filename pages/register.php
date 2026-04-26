@@ -1,4 +1,5 @@
 <?php
+include '../includes/5_sidebar.php';
 require_once '../functions/functions.php';
 
 if (isset($_POST['register'])) {
