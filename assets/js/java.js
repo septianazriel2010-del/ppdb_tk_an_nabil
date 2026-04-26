@@ -13,3 +13,31 @@ document.addEventListener('click', function(e) {
         navbarNav.classList.remove('active')
     }
 });
+
+// ========== SCROLL ANIMATION TRIGGER ==========
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+    );
+}
+
+function triggerScrollAnimations() {
+    const elements = document.querySelectorAll('[data-scroll-animate]');
+    elements.forEach(el => {
+        if (isInViewport(el) && !el.classList.contains('animated')) {
+            const animType = el.getAttribute('data-scroll-animate');
+            el.classList.add(animType, 'animated');
+        }
+    });
+}
+
+// Trigger on scroll
+window.addEventListener('scroll', triggerScrollAnimations, { passive: true });
+
+// Trigger on load juga
+window.addEventListener('load', triggerScrollAnimations);
+
+// Cek juga langsung saat DOM ready
+document.addEventListener('DOMContentLoaded', triggerScrollAnimations);
