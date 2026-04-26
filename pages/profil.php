@@ -1,10 +1,34 @@
 <?php
 session_start();
+require_once '../config/database.php';
 require_once '../functions/functions.php';
 $active_page = 'profil';
 $nama = $_SESSION['nama'] ?? 'Orang Tua';
 $email = $_SESSION['email'] ?? 'orangtua@email.com';
 $inisial = strtoupper(substr($nama, 0, 2));
+
+// Ambil info user dari database untuk mendapatkan waktu update password
+$password_updated = 'Belum pernah diubah';
+if (isset($_SESSION['email'])) {
+    $query = "SELECT password_updated_at FROM users WHERE email = ?";
+    $stmt = $conn->prepare($query);
+    if ($stmt) {
+        $stmt->bind_param("s", $_SESSION['email']);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $user = $result->fetch_assoc();
+        if ($user && !empty($user['password_updated_at'])) {
+            $timestamp = $user['password_updated_at'];
+            $password_updated = date('d F Y H:i', strtotime($timestamp));
+        }
+        $stmt->close();
+    }
+}
+
+$sukses = isset($_GET['success']) ? "Data profil berhasil diperbarui!" : '';
+$sukses = isset($_GET['password_success']) ? "Password berhasil diubah!" : $sukses;
+$error = isset($_GET['error']) ? $_GET['error'] : '';
+$error = isset($_GET['password_error']) ? $_GET['password_error'] : $error;
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -118,6 +142,17 @@ $inisial = strtoupper(substr($nama, 0, 2));
 
     <a href="dashboard-orangtua.php" class="btn-back"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
 
+    <?php if ($sukses): ?>
+    <div style="background:var(--success-bg); border-left:4px solid var(--success); color:var(--success); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:0.9rem 1.1rem; margin-bottom:1.25rem; font-size:0.875rem; display:flex; gap:0.6rem; align-items:flex-start;">
+      <i class="fas fa-check-circle"></i> <?= $sukses ?>
+    </div>
+    <?php endif; ?>
+    <?php if ($error): ?>
+    <div style="background:var(--danger-bg); border-left:4px solid var(--danger); color:var(--danger); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:0.9rem 1.1rem; margin-bottom:1.25rem; font-size:0.875rem; display:flex; gap:0.6rem; align-items:flex-start;">
+      <i class="fas fa-exclamation-circle"></i> <?= $error ?>
+    </div>
+    <?php endif; ?>
+
     <!-- Header profil -->
     <div class="profil-header">
       <div class="avatar-lg"><?= $inisial ?></div>
@@ -142,31 +177,11 @@ $inisial = strtoupper(substr($nama, 0, 2));
           <div class="grid-profil">
             <div class="form-group">
               <label>Nama Lengkap</label>
-              <input type="text" name="nama" value="<?= htmlspecialchars($nama) ?>">
+              <input type="text" name="nama" value="<?= htmlspecialchars($nama) ?>" required>
             </div>
             <div class="form-group">
               <label>Email</label>
-              <input type="email" name="email" value="<?= htmlspecialchars($email) ?>" readonly>
-            </div>
-            <div class="form-group">
-              <label>No. HP / WhatsApp</label>
-              <input type="tel" name="no_hp" placeholder="08xxxxxxxxxx">
-            </div>
-            <div class="form-group">
-              <label>Hubungan dengan Anak</label>
-              <select name="hubungan">
-                <option>Ayah</option>
-                <option>Ibu</option>
-                <option>Wali</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Kota/Kabupaten</label>
-              <input type="text" name="kota" placeholder="Contoh: Bogor">
-            </div>
-            <div class="form-group">
-              <label>Provinsi</label>
-              <input type="text" name="provinsi" placeholder="Contoh: Jawa Barat">
+              <input type="email" name="email" value="<?= htmlspecialchars($email) ?>" required>
             </div>
           </div>
           <div style="margin-top:1.25rem;">
@@ -185,7 +200,7 @@ $inisial = strtoupper(substr($nama, 0, 2));
         <div class="security-item">
           <div class="left">
             <h4>Kata Sandi</h4>
-            <p>Terakhir diubah: Tidak diketahui</p>
+            <p>Terakhir diubah: <?= $password_updated ?></p>
           </div>
           <button class="btn-outline" onclick="document.getElementById('formPassword').style.display='block'">Ubah Kata Sandi</button>
         </div>

@@ -21,6 +21,8 @@ if (isset($_POST['login'])) {
     } else {
         $error = "Email atau password salah!";
     }
+
+    
 }
 ?>
 <!DOCTYPE html>

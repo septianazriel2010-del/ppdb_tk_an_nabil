@@ -196,7 +196,7 @@ $inisial = strtoupper(substr($nama, 0, 2));
               Berapa usia minimal anak untuk mendaftar di RA An-Nabil?
               <i class="fas fa-chevron-down chev"></i>
             </div>
-            <div class="faq-a">Calon peserta didik minimal berusia 4 tahun per 1 Juli 2025. Tidak ada batasan usia maksimal selama anak berada di jenjang RA/TK.</div>
+            <div class="faq-a">Calon peserta didik minimal berusia 4 tahun lebih</div>
           </div>
 
           <div class="faq-item">
@@ -204,7 +204,7 @@ $inisial = strtoupper(substr($nama, 0, 2));
               Apakah pendaftaran bisa dilakukan secara langsung ke sekolah?
               <i class="fas fa-chevron-down chev"></i>
             </div>
-            <div class="faq-a">Pendaftaran utama dilakukan melalui portal online ini. Namun, orang tua yang mengalami kendala teknis dapat datang langsung ke kantor sekolah pada jam operasional (Senin–Jumat, 08.00–15.00).</div>
+            <div class="faq-a">bisa, langsung menghadap guru yang bertugas</div>
           </div>
 
           <div class="faq-item">
@@ -212,7 +212,7 @@ $inisial = strtoupper(substr($nama, 0, 2));
               Apakah ada biaya pendaftaran?
               <i class="fas fa-chevron-down chev"></i>
             </div>
-            <div class="faq-a">Pendaftaran awal tidak dipungut biaya. Biaya administrasi dan daftar ulang hanya dibayarkan setelah calon peserta dinyatakan diterima.</div>
+            <div class="faq-a">Ada atas kesepakatan sekolah dan orangtua</div>
           </div>
 
           <div class="faq-item">
@@ -233,8 +233,8 @@ $inisial = strtoupper(substr($nama, 0, 2));
               <p style="font-size:0.83rem; color:var(--text-secondary);">Kami siap membantu Anda pada jam kerja Senin–Jumat, 08.00–15.00 WIB.</p>
             </div>
             <div style="display:flex; flex-direction:column; gap:0.5rem;">
-              <a href="https://wa.me/6281234567890" class="btn-back" style="margin-bottom:0;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-              <a href="mailto:ppdb@ra-annabil.sch.id" class="btn-back" style="margin-bottom:0; background:var(--bg-white); color:var(--primary); border:1.5px solid var(--primary); box-shadow:none;"><i class="fas fa-envelope"></i> Email</a>
+              <a href="https://wa.me/6289614287910" class="btn-back" style="margin-bottom:0;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+              <a href="mailto:alyamuhimah@gmail.com" class="btn-back" style="margin-bottom:0; background:var(--bg-white); color:var(--primary); border:1.5px solid var(--primary); box-shadow:none;"><i class="fas fa-envelope"></i> Email</a>
             </div>
           </div>
         </div>
