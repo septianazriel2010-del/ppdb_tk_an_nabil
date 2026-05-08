@@ -1,8 +1,48 @@
+# =========================================================
+# Security .htaccess
+# Tidak mengubah fungsi utama website
+# =========================================================
+
 # ── Nonaktifkan directory listing ──
 Options -Indexes
 
-# ── Blokir akses langsung ke file sensitif ──
-<FilesMatch "\.(sql|log|env|bak|sh|json)$">
-    Order Allow,Deny
-    Deny from all
+# ── Matikan signature Apache ──
+ServerSignature Off
+
+# ── Proteksi file sensitif ──
+<FilesMatch "(^\.|composer\.(json|lock)|package(-lock)?\.json|yarn\.lock|\.env|\.git|\.htaccess|web\.config|artisan|README|LICENSE|phpunit\.xml|.*\.(sql|log|env|bak|sh|ini|conf|yml|yaml))$">
+    Require all denied
 </FilesMatch>
+
+# ── Blokir akses ke folder tersembunyi (.git dll) ──
+RewriteEngine On
+RewriteRule "(^|/)\." - [F,L]
+
+# ── Cegah MIME sniffing ──
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# ── Proteksi clickjacking ──
+<IfModule mod_headers.c>
+    Header always append X-Frame-Options SAMEORIGIN
+</IfModule>
+
+# ── Aktifkan XSS protection browser lama ──
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# ── Batasi HTTP methods berbahaya ──
+<LimitExcept GET POST HEAD>
+    Require all denied
+</LimitExcept>
+
+# ── Nonaktifkan akses TRACE/TRACK ──
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+RewriteRule .* - [F]
+
+# ── Lindungi file .htaccess sendiri ──
+<Files ".htaccess">
+    Require all denied
+</Files>
