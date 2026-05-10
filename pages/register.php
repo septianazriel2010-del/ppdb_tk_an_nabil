@@ -1,14 +1,20 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+session_start();
 require_once '../functions/functions.php';
 
 if (isset($_POST['register'])) {
     $result = registerUser($_POST);
 
     if ($result === true) {
-    echo "<script>alert('Berhasil daftar!'); window.location='login.php';</script>";
-} else {
-    $error = $result;
-}
+        $_SESSION['pending_email'] = $_POST['email'];
+        session_write_close();
+        echo "<script>alert('Kode OTP telah dikirim ke email Anda. Silakan cek inbox/spam.'); window.location='verify_otp.php';</script>";
+        exit;
+    } else {
+        $error = $result;
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -77,7 +83,6 @@ if (isset($_POST['register'])) {
 </section>
 
 <script>
-// hide password
 function togglePassword() {
     const pass = document.getElementById("password");
     pass.type = pass.type === "password" ? "text" : "password";
